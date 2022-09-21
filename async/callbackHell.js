@@ -30,23 +30,23 @@ function hello(name, myCallback) {
   }
 }
   // --
-    console.log('Initiating process');
+    console.log('starting process');
     hello('Dan', function (name) {
         talking(name, 2, function(){
-            console.log('Finishing Process')
+            console.log('ending Process')
         });
     });
 
 
 
 
-/*   console.log('Initiating process');
+/*   console.log('starting process');
   hello('Dan',function() {
     talk(function (){
         talk(function (){
             talk(function (){
                 bye('Dan', function(name) {
-            console.log('Finishing process');
+            console.log('Ending process');
            });
       });
      });

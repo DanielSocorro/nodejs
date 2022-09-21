@@ -10,10 +10,10 @@ function bye(name, anotherCallback) {
     anotherCallback();
     }, 1000);
 }
-console.log('Initiating process');
+console.log('starting process');
 hello('Dan',function() {
     bye('Dan', function(name) {
-        console.log('Finishing process');
+        console.log('Ending process');
     });
 });
 
