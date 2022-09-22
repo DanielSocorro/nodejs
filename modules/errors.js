@@ -1,9 +1,28 @@
+function anotherFunction() {
+    return breaking();
+}
+
+
 function breaking() {
     return 3 + z;
 }
 
+function breakingAsync(cb) {
+    setTimeout(function () {
+        try {
+        return 3 + z;
+        } catch(err) {
+            console.error('Error in my Async function');
+            cb(err);
+        }
+    })
+}
+
 try {
-breaking();
+   // anotherFunction();
+   breakingAsync(function(err) {
+    console.log(err.message)
+   });
 } catch(err) {
     console.error('well, something is broken...');
     console.error(err.message);
