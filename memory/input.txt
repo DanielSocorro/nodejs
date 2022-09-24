@@ -1,0 +1,6 @@
+hello
+I'm
+a file
+that we
+want to
+read
